@@ -5,6 +5,7 @@ import Navbar from "./components/Navbar/Navbar";
 import RouterPath from "./config/routes";
 import { theme } from "./config/theme_ui";
 import Home from "./pages/Home/Home";
+import "animate.css";
 
 function App() {
   return (

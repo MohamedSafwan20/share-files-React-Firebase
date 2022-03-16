@@ -4,6 +4,8 @@ const Color = {
   secondary: "#a49ce9",
   disabled: "#d6daec",
   disabledVariant: "#b8c1d4",
+  error: "#f44336",
+  success: "#4caf50",
 };
 
 export default Color;

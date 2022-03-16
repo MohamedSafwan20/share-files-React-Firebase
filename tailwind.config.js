@@ -8,6 +8,8 @@ module.exports = {
         secondary: "#a49ce9",
         disabled: "#d6daec",
         disabledVariant: "#f5f8ff",
+        error: "#f44336",
+        success: "#4caf50",
       },
     },
   },
