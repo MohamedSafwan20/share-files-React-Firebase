@@ -3,7 +3,7 @@ const Color = {
   primaryVariant: "#bbc4e9",
   secondary: "#a49ce9",
   disabled: "#d6daec",
-  disabledVariant: "#f5f8ff",
+  disabledVariant: "#b8c1d4",
 };
 
 export default Color;

@@ -4,6 +4,16 @@
 @tailwind utilities;
 /* End of Tailwind css */
 
+/* Variables */
+:root {
+  --primary-color: #5975c6;
+  --primary-variant-color: #bbc4e9;
+  --secondary-color: #a49ce9;
+  --disabled-color: #d6daec;
+  --disabled-variant-color: #b8c1d4;
+}
+/* End of Variables */
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -11,6 +21,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  background-color: var(--primary-color);
 }
 
 code {

@@ -1,16 +1,20 @@
 import React from "react";
-import { Button, ThemeProvider } from "theme-ui";
+import { Route, Routes } from "react-router-dom";
+import { ThemeProvider } from "theme-ui";
+import Navbar from "./components/Navbar/Navbar";
+import RouterPath from "./config/routes";
 import { theme } from "./config/theme_ui";
+import Home from "./pages/Home/Home";
 
 function App() {
   return (
     <ThemeProvider theme={theme}>
-      <div>
-        <Button mr={2}>Beep</Button>
-        <h1 className="text-3xl font-bold underline text-primary">
-          Hello world!
-        </h1>
-      </div>
+      <main>
+        <Navbar />
+        <Routes>
+          <Route path={RouterPath.home} element={<Home />} />
+        </Routes>
+      </main>
     </ThemeProvider>
   );
 }
