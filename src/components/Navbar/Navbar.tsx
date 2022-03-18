@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom";
 import logo from "../../assets/logo.png";
+import RouterPath from "../../config/routes";
 
 const Navbar = () => {
   return (
@@ -10,14 +11,20 @@ const Navbar = () => {
       </div>
       <div className="space-x-4">
         <Link
+          to={RouterPath.download}
+          className="text-primaryVariant uppercase hover:text-[white] text-xs"
+        >
+          Download
+        </Link>
+        <Link
           to="#"
-          className="text-primaryVariant uppercase hover:text-[white] text-sm"
+          className="text-primaryVariant uppercase hover:text-[white] text-xs"
         >
           Signup
         </Link>
         <Link
           to="#"
-          className="text-primaryVariant uppercase hover:text-[white] text-sm"
+          className="text-primaryVariant uppercase hover:text-[white] text-xs"
         >
           Login
         </Link>
