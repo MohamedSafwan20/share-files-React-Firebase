@@ -28,7 +28,7 @@ const Download = () => {
   };
 
   return (
-    <div className="flex justify-center items-center flex-col h-[90vh] w-[60vw] mx-auto">
+    <div className="md:w-[60vw] flex justify-center items-center flex-col h-[90vh] mx-auto">
       {hasError && (
         <Alert
           bg={Color.error}
@@ -44,7 +44,7 @@ const Download = () => {
           Download documents your team shared
         </p>
       </div>
-      <div className="mt-4 w-[60%]">
+      <div className="mt-4 w-[80%]">
         <p className="text-primaryVariant mb-2">Enter Link name</p>
         <Input
           onChange={(e) => setLinkname(e.target.value)}

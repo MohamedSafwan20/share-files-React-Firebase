@@ -75,7 +75,7 @@ const Home = () => {
   };
 
   return (
-    <div className="flex justify-center items-center flex-col h-[90vh] w-[60vw] mx-auto">
+    <div className="md:w-[60vw] flex justify-center items-center flex-col h-[90vh] mx-auto">
       {hasError && (
         <Alert
           bg={Color.error}
@@ -101,7 +101,7 @@ const Home = () => {
           <br /> with your team
         </p>
       </div>
-      <div className="mt-4 w-[60%]">
+      <div className="w-[85%] mt-4">
         <p className="text-primaryVariant mb-2">Link name</p>
         <Input
           onChange={(e) => setFilename(e.target.value)}
@@ -121,7 +121,7 @@ const Home = () => {
           e.preventDefault();
         }}
         onDrop={handleFileDrop}
-        className="mt-7 p-8 space-y-3 bg-disabledVariant w-[60%] flex justify-around items-center flex-col border-dashed border-primaryVariant border-[3px] rounded-lg min-h-[250px]"
+        className="w-[85%] mt-7 p-8 space-y-3 bg-disabledVariant flex justify-around items-center flex-col border-dashed border-primaryVariant border-[3px] rounded-lg min-h-[250px] text-center"
         style={{
           background:
             "linear-gradient(344deg, rgba(214,218,236,1) 26%, rgba(255,255,255,1) 100%)",

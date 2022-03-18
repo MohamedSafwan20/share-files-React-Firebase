@@ -7,7 +7,10 @@ const Navbar = () => {
 
   return (
     <nav className="flex justify-around items-center p-4">
-      <Link to={RouterPath.home} className="flex items-center gap-2">
+      <Link
+        to={RouterPath.home}
+        className="sm:flex sm:items-center sm:gap-2 hidden"
+      >
         <img src={logo} alt="logo" className="w-[30px] h-[30px]" />
         <p className="text-[white] font-medium text-lg">Share Files</p>
       </Link>
