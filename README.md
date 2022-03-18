@@ -1,3 +1,24 @@
+# Share Files
+
+Website for sharing files and access it in any device. You can upload any file for free and download it to any device.
+
+# How to setup this project
+
+1. Download or clone this repository
+2. Create a .env.local file in root directory and add the below code
+
+```
+REACT_APP_FIREBASE_API_KEY = <Put your Firebase api key here>
+REACT_APP_FIREBASE_AUTH_DOMAIN = <Put your Firebase auth domain here>
+REACT_APP_FIREBASE_PROJECT_ID = <Put your Firebase project id here>
+REACT_APP_FIREBASE_STORAGE_BUCKET = <Put your Firebase storage bucket here>
+REACT_APP_FIREBASE_MESSAGING_SENDER_ID = <Put your Firebase sender id here>
+REACT_APP_FIREBASE_APP_ID = <Put your Firebase app id here>
+```
+
+3. Run `npm i` command
+4. Run `npm start` and open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
