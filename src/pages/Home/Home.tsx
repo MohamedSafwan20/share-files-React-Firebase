@@ -33,14 +33,18 @@ const Home = () => {
 
     const res = await FileService.uploadFile({ file: file[0], filename });
 
-    if (res) {
+    if (res.status) {
       setShowFileUploadedAlert(true);
 
       setTimeout(function () {
         setShowFileUploadedAlert(false);
       }, Constant.MAX_ALERT_TIME);
     } else {
-      setHasError("Something went wrong!");
+      if (res.message !== undefined) {
+        setHasError(res.message);
+      } else {
+        setHasError("Something went wrong!");
+      }
     }
 
     setIsLoading(false);
@@ -61,14 +65,18 @@ const Home = () => {
       filename,
     });
 
-    if (res) {
+    if (res.status) {
       setShowFileUploadedAlert(true);
 
       setTimeout(function () {
         setShowFileUploadedAlert(false);
       }, Constant.MAX_ALERT_TIME);
     } else {
-      setHasError("Something went wrong!");
+      if (res.message !== undefined) {
+        setHasError(res.message);
+      } else {
+        setHasError("Something went wrong!");
+      }
     }
 
     setIsLoading(false);
