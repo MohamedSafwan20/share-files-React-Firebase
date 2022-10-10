@@ -45,7 +45,9 @@ const Download = () => {
         </p>
       </div>
       <div className="mt-4 w-[80%]">
-        <p className="text-primaryVariant mb-2">Enter Link name</p>
+        <p className="text-primaryVariant mb-2">
+          Enter the name you received when uploaded the file
+        </p>
         <Input
           onChange={(e) => setLinkname(e.target.value)}
           className="bg-white"

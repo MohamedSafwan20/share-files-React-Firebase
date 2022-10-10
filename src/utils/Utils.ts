@@ -13,3 +13,7 @@ export function downloadFileFromUrl({
   a.click();
   a.remove();
 }
+
+export const copyToClipboard = (text: string) => {
+  navigator.clipboard.writeText(text);
+};

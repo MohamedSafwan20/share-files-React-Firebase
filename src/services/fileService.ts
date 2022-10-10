@@ -1,40 +1,27 @@
-import { getDownloadURL, listAll, ref, uploadBytes } from "firebase/storage";
+import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
+import ShortUniqueId from "short-unique-id";
 import { storage } from "../config/firebase";
 import { downloadFileFromUrl } from "../utils/Utils";
 
 type UploadRes = {
   status: boolean;
-  message?: string;
+  data?: string;
 };
 
 export default class FileService {
-  public static async uploadFile({
-    file,
-    filename,
-  }: {
-    file: File;
-    filename: string;
-  }): Promise<UploadRes> {
-    const root = ref(storage);
-    const allFiles = await listAll(root);
+  public static async uploadFile({ file }: { file: File }): Promise<UploadRes> {
+    const filename = new ShortUniqueId({
+      dictionary: "number",
+    })();
+    const storageRef = ref(storage, filename);
 
-    const isFileNameAlreadyExists = !allFiles.items.every(
-      (file) => file.name !== filename
-    );
+    const res = await uploadBytes(storageRef, file);
 
-    if (!isFileNameAlreadyExists) {
-      const storageRef = ref(storage, filename);
-
-      const res = await uploadBytes(storageRef, file);
-
-      if (res.metadata.name !== filename) {
-        return { status: false };
-      }
-
-      return { status: true };
+    if (res.metadata.name !== filename) {
+      return { status: false };
     }
 
-    return { status: false, message: "Link name already exists." };
+    return { status: true, data: filename };
   }
 
   public static async downloadFile({
