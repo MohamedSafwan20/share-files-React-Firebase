@@ -2,6 +2,8 @@
 
 Website for sharing files and access it in any device. You can upload any file for free and download it to any device.
 
+Deployed to Vercel: https://share-files.vercel.app/
+
 # How to setup this project
 
 1. Download or clone this repository
